@@ -1,1513 +1,334 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<!--
-	
-FOR ADDITIONAL SUPPORT: Contact the developer at http://www.themeforest.net/user/egobuilders
-
-In this file "index.html":
-	• Change logo images and site/company name in this file (logos are in the "images" folder)
-	• Make all text content changes in this file
-	• Edit navigation menu in this file (text on buttons should match id of section it scrolls to - not case sensitive)
-	
-See "style.css" to update crew photos, background images, fonts, colors, and other CSS (all images are in the "images" folder, except for gallery photos and thumbnails)
-
-See "gallery.xml" to edit gallery text captions, photos, and links to youtube or vimeo videos (all thumbnails and photos for the gallery are in the "gallery" folder)
-
-(The video player in the gallery does not currently support other file types, such as .mov, .avi, .mpg, .flv, etc., but the developer can add that feaure upon request)
-
-**********************************************************************************************
-
-HTML TABLE OF CONTENTS
-
-1.0 - <head> - load style.css and responsive.css, Google Fonts, and javascript/jQuery files
-
-2.0 - <body> - website layout
-
-	2.1 - home
-	
-	2.2 - header - navigation menu, logo, and color-picker
-		2.2.1 - navigation menu
-		2.2.2 - logo
-		2.2.3 - color-picker
-		
-	2.3 - gallery
-	
-	2.4 - crew
-		2.4.1 - crew member social networking icons
-			2.4.1.1 - crew member 1 social networking icons
-			2.4.1.2 - crew member 2 social networking icons
-		2.4.2 - crew member photo
-			2.4.2.1 - crew member 1 photo
-			2.4.2.2 - crew member 2 photo
-			
-	2.5 - about
-	
-	2.6 - responsive (just the section name, not the responsive programming)
-	
-	2.7 - contact - AJAX, jQuery, PHP eMail form
-		2.7.1 - social networking icons below contact section
-		
-	2.8 - footer, footer logo
-	
-3.0 - overlays (see gallery.xml file) - gallery, gallery captions, gallery buttons, and "Loading" page
-	3.1 - "full" is the fullsized gallery - contains slideshow photos and videos
-	3.2 - gallery captions, gallery buttons
-	3.3 - gallery slideshow captions
-	3.4 - "LOADING" page
-	
-4.0 - <script> - load additional external jquery files before closing body tag
-
-5.0 </body> - close the body tag
-
-**********************************************************************************************
-
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-	
-1.0 - <head> - load external css, Google Fonts, and jquery files
-
--->
-
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<title>
-		Ascende
-	</title>
-	
-	<meta name="Description" content="portfolio" />
-	<meta name="Keywords" content="portfolio" />
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	
-	<!-- DISABLE COMPATIBILITY MODE -->
-	<meta http-equiv="X-UA-Compatible" content="IE=9" />
-	
-	<!-- CSS -->
-	<link href="style.css" type="text/css" media="screen" rel="stylesheet" />
-	<link href="responsive.css" type="text/css" media="screen" rel="stylesheet" />
-	
-	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:100italic,200italic,300italic,400italic,600italic,700italic,800italic,100,200,300,400,600,700,800' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css' />
-	
-	<!-- Javascript / jQuery -->
-	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/detect_browser.js"></script>
-	<script type="text/javascript" src="js/detect_os.js"></script>
-	
-	<!-- html5.js for IE less than 9 -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+<title>Marushi Freelance Photographer &amp; Videographer ถ่ายภาพนิ่ง ถ่ายวีดีโอ ทั่วไทย</title>
+<meta charset="utf-8">
+<meta name="msvalidate.01" content="D636FC566231658694FEF4E85E5AA355" />
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="ช่างวีดีโอ,ถ่ายวีดีโอ,ช่างวีดีโอหาดใหญ่,ถ่ายวีดีโอหาดใหญ่ ถ่ายวีดีโอหาดใหญ่,ถ่ายวีดีโอ ถ่ายภาพ,ช่างภาพ,ช่างภาพหาดใหญ่,ถ่ายภาพหาดใหญ่,videographer,photographer,videography,photography,hatyai videography,hatyai photography,hatyai photographer,hatyai videographer,ถ่ายภาพห้อง,interior photography,proposal,ขอแต่งงาน" />
 
-	<!-- css3-mediaqueries.js for IE less than 9 -->
-	<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
-	
+<meta name="description" content="Videography&Photography in negotiable price. ถ่ายภาพและวีดีโอทั่วไทยในราคาที่ตกลงกันได้ : )" />
+<META NAME="ROBOTS" CONTENT="NOFOLLOW">
+<link rel="stylesheet" href="stylesheets/foundation.min.css">
+<link rel="stylesheet" href="stylesheets/main.css">
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/smoothscroll.js"></script> 
+<script type="text/javascript" src="javascripts/modernizr.foundation.js"></script>
+		<link rel="stylesheet" href="index_videolb/videolightbox.css" type="text/css" />		
+			<link rel="stylesheet" type="text/css" href="index_videolb/overlay-minimal.css"/>
+			<script src="index_videolb/jquery.js" type="text/javascript"></script>
+			<script src="index_videolb/swfobject.js" type="text/javascript"></script>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
 </head>
+<body onLoad="MM_preloadImages('images/b2.png')">
+
+<div class="row"> <a href="index.html" class="smoothScroll" ><img src="header.png" alt="marushi logo ถ่ายภาพ ถ่ายวีดีโอหาดใหญ่ ช่างภาพ ช่างวีดีโอ หาดใหญ่" name="image1" id="image1" style="border:none; margin-top:-5px"></a></div>
+<div class="row page_wrap" style="margin-top:-2px">
+  <!-- page wrap -->
+  <div class="twelve columns">
+    <!-- page wrap -->
+    <div class="row">
+      <div class="twelve columns header_nav" style="margin-bottom:0; box-shadow: none">
+        <div class="twelve columns">
+          <ul id="menu-header" class="nav-bar horizontal">
+            <li><a href="http://www.psu.ac.th">PSU</a></li>
+            <li class="has-flyout"><a href="">Quick Access</a><a href="#" class="flyout-toggle"></a>
+                          <ul class="flyout">
+                <li class="has-flyout"><a href="http://lms.psu.ac.th/" class="smoothScroll">LMS</a></li>
+                <li class="has-flyout"><a href="http://reg.psu.ac.th/" class="smoothScroll">PSU Register Office</a></li>
+                <li class="has-flyout"><a href="www.grad.psu.ac.th/" class="smoothScroll">PSU Graduation School</a></li>
+                <li class="has-flyout"><a href="www.clib.psu.ac.th/" class="smoothScroll">PSU Library</a></li>
+                <li class="has-flyout"><a href="" class="smoothScroll">Student Email </a></li>
+                                <li class="has-flyout"><a href="" class="smoothScroll">Grade Check</a></li>
+                <li class="has-flyout"><a href="" class="smoothScroll">Graduate Office@eng.psu </a></li>
+                                <li class="has-flyout"><a href="photogallery.html#anchor6" class="smoothScroll">FAQ</a></li>
+              </ul>
+            </li>
+            
+            <li class="has-flyout"><a href="">For Visitor</a><a href="#" class="flyout-toggle"></a>
+              <ul class="flyout">
+                <li class="has-flyout"><a href="index.html#anchor2" class="smoothScroll">Student Program</a></li>
+                <li class="has-flyout"><a href="index.html#anchor3" class="smoothScroll">News & Activites</a></li>
+                <li class="has-flyout"><a href="index.html#anchor4" class="smoothScroll">Showcase & Award</a></li>
+                <li class="has-flyout"><a href="index.html#anchor5" class="smoothScroll">Research</a></li>
+                <li class="has-flyout"><a href="index.html#anchor6" class="smoothScroll">Personal</a></li>
+                <li class="has-flyout"><a href="index.html#anchor6" class="smoothScroll">About us</a></li>
+              </ul>
+            </li>
+                        <li class="has-flyout"><a href="">Social Network</a><a href="#" class="flyout-toggle"></a>
+              <ul class="flyout">
+                <li class="has-flyout"><a href="https://youtube.com/watch?v=7LF3cnbwKxU" class="smoothScroll">Youtube</a></li>
+                <li class="has-flyout"><a href="https://www.facebook.com/MITPSU" class="smoothScroll">Facebook</a></li>
+                <li class="has-flyout"><a href="" class="smoothScroll">MIT RSS feeds</a></li>
+              </ul>
+            </li>
+            <p><br>
+            </p>
+          </ul>
+          <script>$('ul#menu-header').nav-bar();</script>
+        </div>
+      </div>
+    </div>
+
+    <!-- END Header -->
+    <div class="show-for-large-up">
+      <!-- Slider -->
+      <div class="row">
+             <div id="featured"><img src="images/test3.jpg" alt="marushi portrait"> <img src="images/test4.jpg" alt="marushi portrait"> <img src="images/test5.jpg" alt="marushi portrait"><img src="images/test1.jpg" alt="marushi graduation"><img src="images/test2.jpg" alt="marushi prewedding"></div>
+    </div>
+    <!-- END Slider -->     
+        <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+<script type="text/javascript">
+var urlToLike = 'https://www.facebook.com/marushistudio';
+	if (urlToLike == '') {
+            urlToLike = window.location.href;
+      }
+      urlToLike = encodeURIComponent(urlToLike);
+
+      var font = encodeURIComponent('tahoma');
+
+
+document.write ('<iframe src="http://www.facebook.com/widgets/like.php?locale=en_US&amp;href='+urlToLike+'&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;height=150&amp;action=like&amp;font='+font+'&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; border-color:#ffffff; overflow:hidden; width:450; height:150"></iframe>')
+</script>
+
+    <p>&nbsp;</p>
+<p>&nbsp;</p><center>
+<iframe width="840" height="560" src="http://www.youtube.com/embed/QvyCXFsYsYY" frameborder="0" allowfullscreen></iframe>
+    <p>&nbsp;</p>
+</embed></center>
+             
+
+ 
+
+      <p>&nbsp;</p>
+            <p>&nbsp;</p>
+
+
+    <div class="row">
+      <div class="heading_dots hide-for-small" style="margin-bottom:25px">
+        <h1 class="heading_supersize"><span class="heading_center_bg"><a name="anchor2" id="anchor2"></a>Wedding Ceremony</span></h1>
+      </div>
+  </div>
+      <div class="twelve columns">
+        <p class="welcome_text"><strong>Wedding photography</strong> is the photography of activities relating to weddings.   It encompasses photographs of the couple before marriage (for   announcements, portrait displays, or thank you cards) as well as   coverage of the wedding and reception (sometimes referred to as the wedding breakfast in non-US countries).   It is a major commercial endeavor that supports the bulk of the efforts   for many photography studios or independent photographers.</p>
+ <center></center>
+        <p class="welcome_text">&nbsp;</p>
+        	<div class="videogallery">
+<a class="voverlay" href="http://www.youtube.com/v/FOYj2RUK3NQ?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="[PC] Wedding Ceremony คุณเก๋ &amp; คุณน้อง HD"><img src="index_videolb/thumbnails/0.png" alt="[PC] Wedding Ceremony คุณเก๋ &amp; คุณน้อง HD" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/ts6vvuxchsE?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="[PC] Wedding Ceremony ส.ต.ต.ภานุพงศ์ &amp; คุณสุกัญญา"><img src="index_videolb/thumbnails/1.png" alt="[PC] Wedding Ceremony ส.ต.ต.ภานุพงศ์ &amp; คุณสุกัญญา" /><span></span></a>
+<a href="https://www.youtube.com/watch?v=QZZzPleiY7E" target="_new" title="[PC] Engagement งานหมั้นเช้า คุณจิรภัทร์ &amp; คุณธาวิน"><img src="index_videolb/thumbnails/2.png" alt="[PC] Engagement งานหมั้นเช้า คุณจิรภัทร์ &amp; คุณธาวิน" /><span></span></a>
+<a href="https://www.youtube.com/watch?v=j6zn-WxbbC8" target="_new" title="[PC] Wedding Ceremony คุณเก๋ &amp; คุณเอก (Special Highlight) HD"><img src="index_videolb/thumbnails/3.png" alt="[PC] Wedding Ceremony คุณเก๋ &amp; คุณเอก (Special Highlight) HD" /><span></span></a>
+	    </div>
+	<script src="index_videolb/jquery.tools.min.js" type="text/javascript"></script>
+	<script src="index_videolb/videolightbox.js" type="text/javascript"></script>
+        <p class="welcome_text"><!--  --></p>
+        <p class="welcome_text">&nbsp;</p>
+        <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+
+    </div>
+       </div>
+<!--  -->
+          <p>&nbsp;</p>
+      <p>&nbsp;</p>
+        <p>&nbsp;</p>
+            <p>&nbsp;</p>
+      <p>&nbsp;</p>
+        <p>&nbsp;</p>
+            <p>&nbsp;</p>
+      <p>&nbsp;</p>
+        <p>&nbsp;</p>
+                <p>&nbsp;</p>
+
+                    <!-- end row -->
+          <div class="row">
+      <div class="heading_dots hide-for-small" style="margin-bottom:25px">
+        <h1 class="heading_supersize"><span class="heading_center_bg"><a id="anchor3"></a>Wedding Presentation</span></h1>
+      </div>
+  </div>
+      <div class="twelve columns">
+        <p class="welcome_text"><strong>Wedding photography</strong> is the photography of activities relating to weddings.   It encompasses photographs of the couple before marriage (for   announcements, portrait displays, or thank you cards) as well as   coverage of the wedding and reception (sometimes referred to as the wedding breakfast in non-US countries).   It is a major commercial endeavor that supports the bulk of the efforts   for many photography studios or independent photographers.        </p>
+        <p>&nbsp;</p>
+        <p class="welcome_text">&nbsp;</p>
+        	<div class="videogallery">
+            <a class="voverlay" href="http://www.youtube.com/v/LzDwi0I0A2U?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Surprise Birthday Cake @Wedding day Nutkrittar &amp; Dhanakom"><img src="index_videolb/thumbnails/4.png" alt="Surprise Birthday Cake @Wedding day Nutkrittar &amp; Dhanakom" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/eW_BZ9KBRYk?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="คุณแม่ Nutkrittar &amp; Dhanakom"><img src="index_videolb/thumbnails/5.png" alt="คุณแม่ Nutkrittar &amp; Dhanakom" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/QvyCXFsYsYY?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Surprise Birthday Cake @Wedding day behind the scene"><img src="index_videolb/thumbnails/6.png" alt="Surprise Birthday Cake @Wedding day behind the scene" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/6wDPkidFk3c?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Wedding Presentation สมคิด หรับหลี &amp; ดรุณี ดินเดิม"><img src="index_videolb/thumbnails/7.png" alt="Wedding Presentation สมคิด หรับหลี &amp; ดรุณี ดินเดิม" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/NIldNtLQSkc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Slideshow สมคิด หรับหลี &amp; ดรุณี ดินเดิม"><img src="index_videolb/thumbnails/8.png" alt="Slideshow สมคิด หรับหลี &amp; ดรุณี ดินเดิม" /><span></span></a>
+
+              </div>
+<!--  -->
+
+
+        <p class="welcome_text">&nbsp;</p>
+
+         <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+
+    </div>
+        
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+                <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+
+    <!-- end row -->
+   <div class="row">
+      <div class="heading_dots hide-for-small" style="margin-bottom:25px">
+        <h1 class="heading_supersize"><span class="heading_center_bg"><a id="anchor4"></a>Television Programmes</span></h1>
+      </div>
+  </div>
+      <div class="twelve columns">
+        <p class="welcome_text"><strong>Wedding photography</strong> is the photography of activities relating to weddings.   It encompasses photographs of the couple before marriage (for   announcements, portrait displays, or thank you cards) as well as   coverage of the wedding and reception (sometimes referred to as the wedding breakfast in non-US countries).   It is a major commercial endeavor that supports the bulk of the efforts   for many photography studios or independent photographers.        </p>
+        <p class="welcome_text">&nbsp;</p>
+                	<div class="videogallery">
+        <a class="voverlay" href="http://www.youtube.com/v/QiMq_WGzRlY?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Uniparty TV"><img src="index_videolb/thumbnails/9.png" alt="Uniparty TV" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/czMs0JsTz5c?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Uniparty 5 @สำ-นัก-งาน"><img src="index_videolb/thumbnails/10.png" alt="Uniparty 5 @สำ-นัก-งาน" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/XFw6v0jBJMI?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Uniparty 5 1st Anniversary"><img src="index_videolb/thumbnails/11.png" alt="Uniparty 5 1st Anniversary" /><span></span></a>
+              </div>
+<!--  -->
+
+
+        <p class="welcome_text">&nbsp;</p>
+
+         <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+
+    </div>
+       
+                    
+    <!-- end row -->
+    
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+                <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    
+    <div class="row">
+      <div class="heading_dots hide-for-small" style="margin-bottom:25px">
+        <h1 class="heading_supersize"><span class="heading_center_bg"><a id="anchor5"></a>Event</span></h1>
+      </div>
+  </div>
+      <div class="twelve columns">
+        <p class="welcome_text"><strong>Wedding photography</strong> is the photography of activities relating to weddings.   It encompasses photographs of the couple before marriage (for   announcements, portrait displays, or thank you cards) as well as   coverage of the wedding and reception (sometimes referred to as the wedding breakfast in non-US countries).   It is a major commercial endeavor that supports the bulk of the efforts   for many photography studios or independent photographers.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+           	<div class="videogallery">
 
-
-
-
-
-
-<!--
-
-2.0 - <body> - website layout
-
--->
-
-<body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- not visible while full screen slideshow is active -->
-<div id="site" class="layer">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.1 - home
-
--->
-
-<div id="home" class="layer home-click bg-home">
-	
-	<div id="logo-home" class="white">
-		
-		<!-- OPTIONAL - you CAN put ANOTHER logo here if you remove the "comment" tags below -->
-		
-		<!--
-		<div class="pad-bottom-40">
-			<img src="images/logo_home.png" alt="" />
-		</div>
-		-->
-		
-		<h1 class="text-color logo-font">ASCENDE</h1>
-		
-		<h5 class="tagline">RESPONSIVE CREATIVE PORTFOLIO</h5>
-		<h5 class="tagline">VIMEO &amp; YOUTUBE SUPPORT</h5>
-		<h5 class="tagline">AJAX CONTACT FORM</h5>
-		<h5 class="tagline">EASY TO USE</h5>
-		<h5 class="tagline">COOL</h5>
-		
 	</div>
-	
+        <p class="welcome_text">&nbsp;</p>
+<!--  -->
+
+
+        <p class="welcome_text">&nbsp;</p>
+
+         <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+
+    </div>
+      
+       <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+                <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    
+    <div class="row">
+      <div class="heading_dots hide-for-small" style="margin-bottom:25px">
+        <h1 class="heading_supersize"><span class="heading_center_bg"><a id="anchor6"></a>Portrait</span></h1>
+      </div>
+  </div>
+      <div class="twelve columns">
+        <p class="welcome_text"><strong>Wedding photography</strong> is the photography of activities relating to weddings.   It encompasses photographs of the couple before marriage (for   announcements, portrait displays, or thank you cards) as well as   coverage of the wedding and reception (sometimes referred to as the wedding breakfast in non-US countries).   It is a major commercial endeavor that supports the bulk of the efforts   for many photography studios or independent photographers.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+           	<div class="videogallery">
+            <a class="voverlay" href="http://www.youtube.com/v/3Zho3R5vqzQ?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="ที่รัก (เธอ) : เอก สุระเชษฐ์ ( N'มิน &amp; N'แอน )"><img src="index_videolb/thumbnails/12.png" alt="ที่รัก (เธอ) : เอก สุระเชษฐ์ ( N'มิน &amp; N'แอน )" /><span></span></a>
+<a class="voverlay" href="http://www.youtube.com/v/_siHJNyAOQc?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Protrait trip N'Taae ( Crush - Palmy Feat. Erlend Øye )"><img src="index_videolb/thumbnails/13.png" alt="Protrait trip N'Taae ( Crush - Palmy Feat. Erlend Øye )" /><span></span></a><span class="videolb"><a href="http://videolightbox.com"></a></span>
+	</div>
+        <p class="welcome_text">&nbsp;</p>
+<!--  -->
+
+
+        <p class="welcome_text">&nbsp;</p>
+
+         <p><center><h1><a href="#image1" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','images/b2.png',1)" class="smoothScroll"><img id="Image42" src="images/b1.png"></a></h1>
+    </center></p>
+
+    </div>
+       </div>
+    <div class="row">
+      <div class="twelve columns">
+        <ul id="menu3" class="footer_menu horizontal">
+          <li><a href="https://www.marufree.com">Marushi logo ถ่ายภาพ ถ่ายวีดีโอ ช่างภาพ ช่างวีดีโอ หาดใหญ่</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>$('ul#menu3').nav-bar();</script>
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.2 - menu, logo, and color-picker
-
--->
-
-<div id="menu" class="layer bg-black">
-	<div class="responsive">
-		
-		
-		
-		<div id="menu-btn">
-			<div class="menu-btn-padding text-color">Menu</div><!-- only visible on smaller screens -->
-		</div>
-		
-		
-		
-		<!--
-		
-		2.2.1 - navigation menu
-		
-		-->
-		
-		<div class="header-width-43 the-nav">
-			
-			<div class="the-nav-padding">
-			
-				<a class="menu">Home</a>
-				<a class="menu">Gallery</a>
-				<a class="menu">Crew</a>
-				<a class="menu">About</a>
-				<a class="menu">Responsive</a>
-				<a class="menu">Contact</a>
-				
-			</div>
-			
-		</div>
-		
-		
-		
-		<!--
-		
-		2.2.2 - logo
-		
-		-->
-		
-		<div class="header-width-14 the-logo">
-			
-			<div id="logo-nav" class="bg-color center"><!-- change "bg-color" in class here to "bg-black" when your logo is added -->
-				
-				<!-- your logo goes here - change "bg-color" in class above to "bg-black" -->
-				
-				<img src="images/logo_nav.png" alt="" />
-				
-				<!-- your logo goes above here -->
-			
-			</div>
-			
-		</div>
-		
-		
-		
-		<!--
-		
-		2.2.3 - color-picker
-		
-		-->
-		
-		<div class="header-width-43 the-picker">
-			
-			<div class="the-color-picker">
-				
-				<div class="monitor">&nbsp;</div>
-				
-				<div class="colors">
-					
-					<a id="start" name="yellow" class="color-picker" style="background-color:#ffee00;">&nbsp;</a>
-					<a name="salmon" class="color-picker" style="background-color:#ff7766;">&nbsp;</a>
-					<a name="pink" class="color-picker" style="background-color:#ee5599;">&nbsp;</a>
-					<a name="mint" class="color-picker" style="background-color:#00ddaa;">&nbsp;</a>
-					<a name="lavendar" class="color-picker" style="background-color:#8899dd;">&nbsp;</a>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		
-		
-		<!-- end header sections -->
-		
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.3 - gallery
-
--->
-
-<div id="gallery" class="layer bg-white padder-top padder-bottom">
-	
-	<div class="responsive">
-		
-		
-		
-		<div class="width-50">
-		
-			<div class="hpad">
-		
-				<div id="thumbs" class="align-center">
-					
-					<!--
-						Update gallery thumbnails, captions, photos, and videos in gallery.xml
-						The thumbanils are loaded into this div, "thumbs"
-					-->
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<!-- right side -->
-		
-		<div class="width-50">
-		
-			<div class="hpad">
-				
-				<h1 class="charcoal">
-					Our <span class="text-color-on-white">XML Gallery</span> supports <span class="text-color-on-white">Unlimited</span> Photos &amp; Videos with <span class="text-color-on-white">Custom Captions</span>
-				</h1>
-				
-				<h3 class="charcoal">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper. 
-				</h3>
-				
-				<div class="text grey">
-					
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
-				</div>
-				
-				<button name="crew" class="scroll-button button-text-color">
-					Meet the Crew
-				</button>
-				
-			</div>
-		
-		</div>
-		
-		<!-- end sections -->
-		
-	</div>
-	
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.4 - crew
-
--->
-
-<div id="crew" class="layer bg-charcoal padder-top padder-bottom">
-	
-	<div class="responsive">
-		
-		<!-- left side -->
-		
-		<div class="width-50">
-		
-			<div class="hpad">
-				
-				<h1 class="white">
-					Hundreds of Impressive <span class="text-color">Google Fonts</span> to Enhance Your <span class="text-color">Website</span>
-				</h1>
-				
-				<h3 class="white">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna.
-				</h3>
-				
-				<div class="text grey">
-					
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-					
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim..</p>
-					
-				</div>
-				
-				<button name="about" class="scroll-button button-text-color">
-					Learn About Us
-				</button>
-				
-			</div>
-		
-		</div>
-		
-		<!-- right side -->
-		
-		<div class="width-50">
-			
-			<div class="hpad">
-				
-				<!-- crew member -->
-				
-				<div class="crew-holder">
-					
-					<div class="crew-main">
-						
-						<div class="crew-left">
-							
-							<div class="crew-content">
-								<h4 class="crew-name text-color">Fletcher Peterson</h4>
-								<div class="crew-title silver">Marketing Director</div>
-								
-								<div class="crew-text metal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</div>
-							</div>
-							
-							<!--
-							
-							2.4.1.1 - crew member 1 social networking icons
-							
-							-->
-							
-							<div class="crew-social">
-								<a href="http://www.__________.com/" class="social-crew icon-twitter">&nbsp;</a>
-								<a href="http://www.__________.com/" class="social-crew icon-linkedin">&nbsp;</a>
-								<a href="http://www.__________.com/" class="social-crew icon-facebook">&nbsp;</a>
-							</div>
-							
-						</div>
-						
-						<div class="crew-right">
-							
-							<div class="crew-frame">
-								
-								<!--
-								
-								2.4.2.1 - crew member 1 photo
-								
-								-->
-								
-								<div class="crew-photo crew-1 border-bottom-color">
-									&nbsp;
-								</div>
-								
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<!-- crew member -->
-				
-				<div class="crew-holder">
-					
-					<div class="crew-main">
-						
-						<div class="crew-left">
-							
-							<div class="crew-content">
-								<h4 class="crew-name text-color">Erica Halifax</h4>
-								<div class="crew-title silver">Design &amp; Branding</div>
-								
-								<div class="crew-text metal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</div>
-							</div>
-							
-							<!--
-							
-							2.4.1.2 - crew member 2 social networking icons
-							
-							-->
-							
-							<div class="crew-social">
-								<a href="http://www.__________.com/" class="social-crew icon-twitter">&nbsp;</a>
-								<a href="http://www.__________.com/" class="social-crew icon-linkedin">&nbsp;</a>
-								<a href="http://www.__________.com/" class="social-crew icon-facebook">&nbsp;</a>
-							</div>
-							
-						</div>
-							
-						<div class="crew-right">
-							
-							<div class="crew-frame">
-								
-								<!--
-								
-								2.4.2.2 - crew member 2 photo
-								
-								-->
-								
-								<div class="crew-photo crew-2 border-bottom-color">
-									&nbsp;
-								</div>
-								
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<!-- end of crew members -->
-				
-			</div>
-		
-		</div>
-		
-		<!-- end sections -->
-		
-	</div>
-	
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.5 - about
-
--->
-
-<div id="about" class="layer bg-about padder-top pad-bottom">
-	
-	<div class="responsive">
-		
-		<!-- left side -->
-		
-		<div class="width-50 disappear">
-			&nbsp;
-		</div>
-		
-		<!-- right side -->
-		
-		<div class="width-50">
-		
-			<div class="hpad">
-				
-				<h1 class="white">
-					<span class="text-color">Expand</span> this Layout into <span class="text-color">Additional Pages</span> and Captivate Your <span class="text-color">Audience</span>
-				</h1>
-				
-				<h3 class="white">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna.
-				</h3>
-				
-				<div class="text white">
-					
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel  eum iriure dolor in hendrerit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum.<p>
-						
-				</div>
-				
-				<button name="contact" class="scroll-button button-dark">
-					Contact Us Today
-				</button>
-				
-			</div>
-		
-		</div>
-		
-		<!-- end sections -->
-		
-	</div>
-	
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.6 - responsive
-
--->
-
-<div id="responsive" class="layer bg-color padder-top padder-bottom">
-	
-	<div class="responsive">
-		
-		<!-- first row -->
-		
-		<div class="width-10">
-			&nbsp;
-		</div>
-		
-		<div class="width-80">
-		
-			<div class="hpad">
-				
-				<div class="center-to-left">
-				
-					<h1 class="white-alt pad-bottom-20">
-						Responsive. <span class="black">Smooth.</span> Engaging.
-					</h1>
-					
-					<h4 class="black">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit.
-					</h4>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<div class="width-10">
-			&nbsp;
-		</div>
-		
-		<!-- new row -->
-		
-		<div class="clear promo-icons pad-top-shrink">
-			
-			<div class="hpad promo-center">
-			
-				<div class="promo-it-pc-holder center break-center">
-					
-						<div class="it-pc">&nbsp;</div>
-						<h2 class="white-alt pad-top-20">Yes.</h2>
-						
-				</div>
-
-				<div class="promo-it-tablet-holder center break-center">
-					
-						<div class="it-tablet">&nbsp;</div>
-						<h2 class="white-alt pad-top-20">Yes.</h2>
-					
-				</div>
-				
-				<div class="promo-it-smartphone-holder center break-center">
-					
-						<div class="it-smartphone">&nbsp;</div>
-						<h2 class="white-alt pad-top-20">Yes.</h2>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<!-- new row -->
-		
-		<div class="clear promo-text center-to-left">
-		
-			<div class="hpad">
-				
-				<div class="text black pad-top pad-bottom-important">
-					
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<!-- end rows -->
-		
-	</div>
-	
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.7 - contact - AJAX, jQuery, PHP eMail form
-
--->
-
-<div id="contact" class="layer bg-contact padder-top">
-	
-	<div class="responsive">
-		
-		<!-- left side -->
-		
-		<div class="width-50">
-		
-			<div class="hpad">
-			
-				<h1 class="white">
-					<span class="text-color">Responsive</span>
-					<br />AJAX eMail Form
-					<br /><span class="text-color">With Validation</span>
-				</h1>
-				
-				<h3 class="email-subheader white">
-					Ascende Provides Excellent Support
-				</h3>
-				
-				<div class="address text">
-					
-					<div class="address-street white float table pad-left border-left-1  pad-right">
-						Ascende
-						<br />123 Creative Way
-						<br />London, NY 90210
-						<br />+88 999.555.777
-					</div>
-					
-					<div class="address-email charcoal float table pad-left border-left-1">
-						<a class="text-color" href="mailto:support@ascende.xom">support@ascende.xom</a>
-					</div>
-					
-				</div>
-				
-				<h3 class="grey none">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna nibh.
-				</h3>
-				
-				<div class="text grey pad-top-20 none">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
-				</div>
-				
-			</div>
-		
-		</div>
-		
-		<!-- right side -->
-		
-		<div class="width-50">
-			
-			<div class="hpad">
-				
-				<div id="email-form" class="clear">
-					
-					<div class="email-main">
-						
-						<div class="form-holder">
-							
-							<h5 class="white contact-label">
-								Name <span class="text-color" id="name-error"></span>
-							</h5>
-							<div class="input-underline border-color">
-								<input id="name" class="input-offset" type="text" value="Try me..." onFocus="if ($(this).val()=='Try me...'){$(this).val('')}" />
-							</div>
-							
-							<h5 class="white contact-label">
-								eMail <span class="text-color" id="email-error"></span>
-							</h5>
-							<div class="input-underline border-color">
-								<input id="email" class="input-offset" type="text" />
-							</div>
-							
-							<h5 class="white contact-label">
-								Comments <span class="text-color" id="comments-error"></span>
-							</h5>
-							<div class="textarea-underline border-color">
-								<textarea id="comments" class="textarea-offset" cols="" rows=""></textarea>
-							</div>
-							
-						</div>
-						
-						<div class="pad-top-button">
-							<button id="send-btn" class="button-color">
-								Send
-							</button>
-						</div>
-						
-					</div>
-						
-				</div>
-				
-				<div id="email-confirmation">
-					<h1 class="white">Thank You <br /><span class="text-color">for Your eMail</span></h1>
-					
-					<h3 class="email-subheader white">
-						We will respond as soon as possible.
-					</h3>
-					
-					<div class="pad-top-40">
-						<button id="return-to-form" class="button-color">
-							Return to Contact Form
-						</button>
-					</div>
-					
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		<!-- end sections -->
-		
-	</div>
-	
-	<div class="pad-bottom-contact"></div>
-	
-	
-	
-	<!--
-
-	2.7.1 - social networking icons below contact section
-
-	-->
-
-	<div class="bg-socnet-ghost">
-		
-		<div class="footer-socnet center">
-			
-			<a href="http://www.__________.com/" class="social-footer icon-facebook">&nbsp;</a>
-			<a href="http://www.__________.com/" class="social-footer icon-twitter">&nbsp;</a>
-			<a href="http://www.__________.com/" class="social-footer icon-linkedin">&nbsp;</a>
-			<a href="http://www.__________.com/" class="social-footer icon-google">&nbsp;</a>
-			<a href="http://www.__________.com/" class="social-footer icon-vimeo">&nbsp;</a>
-			<a href="http://www.__________.com/" class="social-footer icon-youtube">&nbsp;</a>
-			
-		</div>
-		
-	</div>
-	
-	
-	
-</div>
-
-
-
-
-
-
-
-
-
-<!--
-<div id="socnet" class="layer bg-socnet">
-	
-	<div class="bg-socnet-ghost">
-		
-		<div class="footer-socnet center">
-			<a href="" class="social-footer facebook-footer">&nbsp;</a>
-			<a href="" class="social-footer twitter-footer">&nbsp;</a>
-			<a href="" class="social-footer linkedin-footer">&nbsp;</a>
-			<a href="" class="social-footer google-footer">&nbsp;</a>
-			<a href="" class="social-footer vimeo-footer">&nbsp;</a>
-			<a href="" class="social-footer youtube-footer">&nbsp;</a>
-		</div>
-		
-	</div>
-	
-</div>
--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-2.8 - footer, footer logo
-
--->
-
-<div id="footer" class="layer bg-black">
-	
-	<div class="responsive">
-		
-		<div class="width-100 center">
-			
-			<div id="logo-footer" class="go-to-top">
-				
-				<!-- your logo goes here -->
-				
-				<img src="images/logo_footer.png" alt="" />
-				
-				<!-- your logo goes above here -->
-				
-			</div>
-			
-		</div>
-		
-	</div>
-	
-	
-</div>
-
-
-
-
-
-
-
-
-
-
-</div><!-- END #SITE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-3.0 - overlays (see gallery.xml file) - gallery, gallery captions, gallery buttons, and "Loading" page
-
--->
-
-
-
-
-
-<!--
-
-3.1 - "full" is the fullsized gallery - contains slideshow photos and videos
-
--->
-
-<div id="full"></div>
-
-
-
-
-
-<!--
-
-3.2 - gallery captions, gallery buttons
-
--->
-
-<div id="slideshow-header">
-
-	<div id="controls">
-		
-		<!-- gallery header -->
-		<h1 id="gallery-header" class="white pad none"></h1>
-		
-		<!-- button: hide slideshow -->
-		<div id="hide-slideshow">
-			&nbsp;
-		</div>
-
-		<!-- button: show/hide slideshow captions -->
-		<div id="toggle-captions">
-			&nbsp;
-		</div>
-		
-		<div id="gallery-left">&nbsp;</div>
-		<div id="gallery-right">&nbsp;</div>
-		
-	</div>
-	
-</div>
-
-
-
-
-
-<!--
-
-3.3 - gallery slideshow captions
-
--->
-
-<div id="captions" class="bg-white">
-	
-	<div class="captions-pad">
-		
-		<div class="gallery-caption-content">
-			<h1 id="gallery-title" class="charcoal-important">&nbsp;</h1>
-			<div id="gallery-description" class="grey">&nbsp;</div>
-			<div id="gallery-link">&nbsp;</div>
-		</div>
-		
-		<div id="hide-captions">&nbsp;</div>
-		
-	</div>
-	
-</div>
-
-
-
-
-
-<!--
-
-3.4 - "LOADING" page
-
--->
-
-<div id="intro" class="center bg-black">
-	<div id="loading">
-		
-		<div id="logo-loading" class="bg-color center">
-			
-			<!-- your logo goes here - change "bg-color" above to "bg-black" -->
-			
-			<img src="images/logo_nav.png" alt="" />
-			
-			<!-- your logo goes above here -->
-		
-		</div>
-		
-		<h6 class="loading-text white pad-bottom-20">
-			LOADING
-		</h6>
-		
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-4.0 - <script> - load additional external jquery files
-
--->
-
-<div id="stats" class="none" style="position:fixed;right:0px;bottom:0px;padding:2px 5px;color:#ffffff;background-color:#000000;font-size:15px;"></div>
-
-<!-- website jQuery functionality -->
-<script type="text/javascript" src="js/functions.js"></script>
-
-<!-- eMail validation -->
-<script type="text/javascript" src="js/email.js"></script>
-
-<!-- color picker -->
-<script type="text/javascript" src="js/color.js"></script>
-
-
-
-
-<!--
-
-5.0 </body> - close the body tag
-
--->
-
+<!-- end page wrap) -->
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
 </body>
-
 </html>
